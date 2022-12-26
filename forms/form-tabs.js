@@ -36,7 +36,7 @@ export class FormTabs extends LitElement {
 
   renderContent() {
     return this.step === 1
-      ? html`<dcreate-account />`
+      ? html`<create-account />`
       : html`<reset-password-form />`;
   }
 
