@@ -32,8 +32,11 @@ export class Username extends LitElement {
 
   render() {
     return html`
-      <label>${this.label}!</label>
-      <input type="text" .value=${this.username}>
+     <password>
+     <reset-password>
+     <submit>
+     <title>
+     <username>
     `;
   }
 }
