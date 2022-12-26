@@ -23,8 +23,6 @@ export class FormTabs extends LitElement {
 
   constructor() {
     super();
-    this.label = 'enter label';
-    this.username = '';
   }
 
   render() {
