@@ -5,16 +5,21 @@
  */
 
 import {LitElement, html, css} from 'lit';
-
-export class Submit extends LitElement {
+import './password';
+import './reset-password';
+import './submit';
+import './title';
+import './username';
+export class Username extends LitElement {
   static get styles() {
     return css`
+      
     `;
   }
 
   static get properties() {
     return {
-      color: {type: String},
+      username: {type: String},
       label: {type: String},
     };
   }
@@ -22,14 +27,15 @@ export class Submit extends LitElement {
   constructor() {
     super();
     this.label = 'enter label';
-    this.link = '';
+    this.username = '';
   }
 
   render() {
     return html`
-      <a href="${this.link}" @click=${this.onsubmit}>${this.label}</a>
-      `;
+      <label>${this.label}!</label>
+      <input type="text" .value=${this.username}>
+    `;
   }
 }
 
-window.customElements.define('submit', Submit);
+window.customElements.define('username', Username);
