@@ -10,6 +10,7 @@ import './reset-password';
 import './submit';
 import './title';
 import './username';
+
 export class Username extends LitElement {
   static get styles() {
     return css`
@@ -32,13 +33,13 @@ export class Username extends LitElement {
 
   render() {
     return html`
-     <password>
-     <reset-password>
-     <submit>
-     <title>
-     <username>
-    `;
+    <div> <password-field /> </div>
+    <div> <reset-password /> </div>
+    <div> <title-component /> </div>
+    <div> <username-field /> </div>
+    <div> <submit-button /> </div>
+     `;
   }
 }
 
-window.customElements.define('username', Username);
+window.customElements.define('form-component', Username);

@@ -23,14 +23,32 @@ export class Title extends LitElement {
   constructor() {
     super();
     this.title = 'enter label';
-    this.size = '1';
+    this.size = 1;
   }
 
   render() {
     return html`
-      <h${this.size}>${this.title}</h${this.size}>
+      ${this.renderTitle()}
       `;
+  }
+
+  renderTitle(){
+    switch(this.size){
+      case 1:
+        return html`
+        <h1>${this.title}</h1>
+        `;
+      case 2:
+        return html`
+        <h2>${this.title}</h2>
+        `;
+      case 3:
+        return html`
+        <h3>${this.title}</h3>
+        `;
+
+    }
   }
 }
 
-window.customElements.define('title', Title);
+window.customElements.define('title-component', Title);

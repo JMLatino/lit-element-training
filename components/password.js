@@ -14,7 +14,7 @@ export class Password extends LitElement {
 
   static get properties() {
     return {
-      Password: {type: String},
+      password: {type: String},
       label: {type: String},
     };
   }
@@ -27,10 +27,10 @@ export class Password extends LitElement {
 
   render() {
     return html`
-      <label>${this.label}!</label>
+      <label>${this.label}</label>
       <input type="password" .value=${this.password}>
     `;
   }
 }
 
-window.customElements.define('password', Password);
+window.customElements.define('password-field', Password);

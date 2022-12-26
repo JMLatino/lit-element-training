@@ -6,7 +6,7 @@
 
 import {LitElement, html, css} from 'lit';
 
-export class Submit extends LitElement {
+export class ResetPassword extends LitElement {
   static get styles() {
     return css`
     `;
@@ -32,4 +32,4 @@ export class Submit extends LitElement {
   }
 }
 
-window.customElements.define('submit', Submit);
+window.customElements.define('reset-password', ResetPassword);

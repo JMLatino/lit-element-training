@@ -32,4 +32,4 @@ export class Submit extends LitElement {
   }
 }
 
-window.customElements.define('submit', Submit);
+window.customElements.define('submit-button', Submit);

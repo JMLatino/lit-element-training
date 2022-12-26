@@ -28,10 +28,10 @@ export class Username extends LitElement {
 
   render() {
     return html`
-      <label>${this.label}!</label>
+      <label>${this.label}</label>
       <input type="text" .value=${this.username}>
     `;
   }
 }
 
-window.customElements.define('username', Username);
+window.customElements.define('username-field', Username);
