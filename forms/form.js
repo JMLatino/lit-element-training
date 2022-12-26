@@ -5,13 +5,14 @@
  */
 
 import {LitElement, html, css} from 'lit';
-import './password';
-import './reset-password';
-import './submit';
-import './title';
-import './username';
+import '../components/password';
+import '../components/reset-password';
+import '../components/submit';
+import '../components/title';
+import '../components/username';
+import '../components/description';
 
-export class Username extends LitElement {
+export class Form extends LitElement {
   static get styles() {
     return css`
       
@@ -33,13 +34,14 @@ export class Username extends LitElement {
 
   render() {
     return html`
-    <div> <password-field /> </div>
-    <div> <reset-password /> </div>
     <div> <title-component /> </div>
+    <div> <description-component /> </div>
+    <div> <password-field /> </div>
     <div> <username-field /> </div>
     <div> <submit-button /> </div>
+    <div> <reset-password /> </div>
      `;
   }
 }
 
-window.customElements.define('form-component', Username);
+window.customElements.define('form-component', Form);
