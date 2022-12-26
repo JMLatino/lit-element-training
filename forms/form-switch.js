@@ -61,8 +61,8 @@ export class FormSwitch extends LitElement {
   renderTabsMenu() {
     return html`
     <div class="tab">
-      <button class="tablinks" @click=${this.selectTab(1)}>create account</button>
-      <button class="tablinks" @click=${this.selectTab(2)}>reset password</button>
+      <button class="tablinks" @click=${()=>{this.selectTab(1)}}>create account</button>
+      <button class="tablinks" @click=${()=>{this.selectTab(2)}}>reset password</button>
     </div>
     `
   }
