@@ -7,6 +7,7 @@
 import { LitElement, html, css } from 'lit';
 import '../components/create-account';
 import '../components/reset-password-form';
+import '../components/tabs';
 
 export class FormTabs extends LitElement {
   static get styles() {
@@ -34,13 +35,13 @@ export class FormTabs extends LitElement {
 
   renderContent() {
     return this.step === 1
-      ? html`<create-account />`
+      ? html`<create-account/>`
       : html`<reset-password-form />`;
   }
 
   renderTabsMenu() {
     return html`
-      <tabs-component @select-tab=${e=>this.selectTab(e.detail)}>
+      <tabs-menu @select-tab=${e=>this.selectTab(e.detail.id)} />
     `
   }
 

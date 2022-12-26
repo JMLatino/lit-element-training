@@ -21,7 +21,7 @@ export class Tabs extends LitElement {
 
   constructor() {
     super();
-    this.label = [
+    this.tabs = [
       {
         label: 'create account',
         id: 1
@@ -37,14 +37,14 @@ export class Tabs extends LitElement {
     return html`
     <div class="tab">
       ${this.tabs.map(tab =>{
-        return html`<button class="tablinks" @click=${()=>{this.selectTab(tab.id)}}>${tab.label}/button>`
+        return html`<button class="tablinks" @click=${()=>{this.selectTab(tab.id)}}>${tab.label}</button>`
       })}
     </div>
     `;
   }
 
   selectTab(id){
-    this.dispatchEvent(new CustomEvent('select-tab', id));
+    this.dispatchEvent(new CustomEvent('select-tab', {detail:{id}}));
   }
 }
 

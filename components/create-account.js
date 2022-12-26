@@ -33,13 +33,6 @@ export class CreateAccount extends LitElement {
 
   render() {
     return html`
-      <div> ${this.renderTabsMenu()} </div>
-      <div> ${this.renderContent()} </div>
-     `;
-  }
-
-  renderContent() {
-    return html`
     <div> <title-component /> </div>
     <div> <description-component /> </div>
     <div> <password-field /> </div>
