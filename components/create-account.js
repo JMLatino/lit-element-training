@@ -33,12 +33,12 @@ export class CreateAccount extends LitElement {
 
   render() {
     return html`
-    <div> <title-component /> </div>
-    <div> <description-component /> </div>
-    <div> <password-field /> </div>
-    <div> <username-field /> </div>
-    <div> <submit-button /> </div>
-    <div> <reset-password @click="${this.step = 2}"/> </div>
+    <div> <title-component title="login" /> </div>
+    <div> <description-component description="authenticate"/> </div>
+    <div> <username-field label="username"/> </div>
+    <div> <password-field label="password"/> </div>
+    <div> <submit-button label="authenticate" /> </div>
+    <div> <reset-password link="#" label="reset password"/> </div>
      `
   }
 }

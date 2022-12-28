@@ -40,12 +40,12 @@ export class ResetPasswordForm extends LitElement {
 
   renderContent() {
     return html`
-    <div> <title-component /> </div>
-    <div> <description-component /> </div>
-    <div> <username-field /> </div>
-    <div> <password-field /> </div>
-    <div> <password-field /> </div>
-    <div> <submit-button /> </div>
+    <div> <title-component title="create account" /> </div>
+    <div> <description-component description="create an account" /> </div>
+    <div> <username-field label="username" /> </div>
+    <div> <password-field label="password" /> </div>
+    <div> <password-field label="repeat password" /> </div>
+    <div> <submit-button label="submit"/> </div>
      `;
   }
 
