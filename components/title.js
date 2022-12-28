@@ -15,7 +15,7 @@ export class Title extends LitElement {
 
   static get properties() {
     return {
-      size: {type: String},
+      size: {type: Number},
       title: {type: String},
     };
   }
@@ -36,7 +36,7 @@ export class Title extends LitElement {
     switch(this.size){
       case 1:
         return html`
-        <h1>${this.title}</h1>
+        <h1 style="color:${this.color}">${this.title}</h1>
         `;
       case 2:
         return html`

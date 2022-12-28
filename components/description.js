@@ -28,7 +28,8 @@ export class Description extends LitElement {
 
   render() {
     return html`
-      <p style="color${this.color}">${this.description}</p>
+      <p style="color:${this.color}">${this.description}</p>
+      <slot></slot>
       `;
   }
 }

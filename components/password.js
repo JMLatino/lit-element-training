@@ -29,6 +29,7 @@ export class Password extends LitElement {
     return html`
       <label>${this.label}</label>
       <input type="password" .value=${this.password}>
+      <slot />
     `;
   }
 }

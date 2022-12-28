@@ -15,7 +15,9 @@ import '../components/description';
 export class Form extends LitElement {
   static get styles() {
     return css`
-      
+      #som{
+        color: red
+      }
     `;
   }
 
@@ -34,12 +36,14 @@ export class Form extends LitElement {
 
   render() {
     return html`
-    <div> <title-component /> </div>
-    <div> <description-component /> </div>
-    <div> <password-field /> </div>
-    <div> <username-field /> </div>
-    <div> <submit-button /> </div>
-    <div> <reset-password /> </div>
+      <div> <title-component size="2" /> </div>
+      <div> <description-component description="some other description" color="pink">
+        <p>another description</p>
+      </description-component> </div>
+      <div> <password-field label="password"> some description <password-field/> </div>
+      <div> <username-field /> </div>
+      <div> <submit-button /> </div>
+      <div> <reset-password /> </div>
      `;
   }
 }
